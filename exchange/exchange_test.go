@@ -16,8 +16,8 @@ func TestConvert(t *testing.T) {
 	}{
 		{"KSH to NGN standard", "KSH", "NGN", 100, 300, true},
 		{"NGN to GSH standard", "NGN", "GHS", 200, 2, true},
-		{"KSH to NON exstant currency", "KSH", "UNKNOWN", 100, 100, false},
-		{"NON existant to existant currency", "UNKNOWN", "KSH", 100, 100, false},
+		{"KSH to NONE exstant currency", "KSH", "UNKNOWN", 100, 100, false},
+		{"NONE existant to existant currency", "UNKNOWN", "KSH", 100, 100, false},
 	}
 
 	for _, tc := range tt {

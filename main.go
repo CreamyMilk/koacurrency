@@ -15,7 +15,7 @@ func main() {
 	}
 
 	mux := http.NewServeMux()
-	fmt.Printf("Listening on port %s\n", PORT)
 	router.SetupRoutes(mux)
-	http.ListenAndServe(PORT, mux)
+	fmt.Printf("Listening on port %s\n", PORT)
+	http.ListenAndServe(PORT, router.Logger(mux))
 }
