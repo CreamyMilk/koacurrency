@@ -7,20 +7,34 @@ To run the service you can run
 $ PORT=:10001 go run main.go
 ```
 
-To issue a conversion request
+To run unit tests run .
+```bash
+$ go test -v ./exchange
+```
+
+_To issue a conversion request_
 ```bash
 curl --header "Content-Type: application/json"   --request POST   --data '
 {
     "from":"KSH",
     "to":"NGN",
-    "amount": 12222.5
+    "amount": 1000.5
 }' http://localhost:10001/api/convert
 ```
 
-Get current conversion rates
+
+
+_Get current conversion rates_
 
 ```bash
 curl http://localhost:10001/api/rates
 ```
+
+----
+> _You can also run the service using docker_
+> ```bash
+> $ docker build -t koacurrency .
+> $ docker run -p 10001:10001 -it koacurrency 
+> ```
 
 
