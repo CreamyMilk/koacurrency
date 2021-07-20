@@ -35,7 +35,7 @@ func (req *ConvertRequest) Convert() (*Currency, error) {
 	}
 
 	if req.Amount <= 0 {
-		return nil, errors.New("conversion rates only occur whit positive values")
+		return nil, errors.New("conversion rates only occur whit positive values greater than zero")
 	}
 
 	var currency Currency
