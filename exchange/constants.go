@@ -1,9 +1,9 @@
 package exchange
 
-//cCnversions holds the to and from rates of each currency
-//It is access as follows
+//Conversions holds the to and from rates of each currency
+//It is accessed as follows
 //
-//conversion_rate := conversions[from][to]
+//conversion_rate := Conversions[from][to]
 var Conversions = map[string]map[string]float64{
 	"KSH": {
 		"NGN": 3,
