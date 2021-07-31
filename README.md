@@ -30,6 +30,11 @@ _Get current conversion rates_
 curl http://localhost:10001/api/rates
 ```
 
+_Get current conversion rates of a particular currency_
+
+```bash
+curl localhost:10001/api/rates?currency="KSH"
+```
 ----
 > _You can also run the service using docker_
 > ```bash

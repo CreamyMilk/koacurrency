@@ -18,3 +18,28 @@ var Conversions = map[string]map[string]float64{
 		"NGN": 69.3,
 	},
 }
+
+//How currency metadata can be stored
+// type CurrencyDetails struct {
+// 	FullName string `json:"fullname"`
+// 	Symbol   string `json:"symbol"`
+// 	Country  string `json:"country"`
+// }
+
+// var CurrencyDetailsData = map[string]CurrencyDetails{
+// 	"KSH": {
+// 		FullName: "Kenyan Shilling",
+// 		Symbol:   "KSH",
+// 		Country:  "Kenya",
+// 	},
+// 	"NGN": {
+// 		FullName: "Nigerian Naira",
+// 		Symbol:   "NGN",
+// 		Country:  "Nigeria",
+// 	},
+// 	"GHS": {
+// 		FullName: "Ghanina Pesos",
+// 		Symbol:   "GHS",
+// 		Country:  "Ghana",
+// 	},
+// }

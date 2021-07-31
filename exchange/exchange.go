@@ -34,8 +34,8 @@ func (req *ConvertRequest) Convert() (*Currency, error) {
 		return nil, fmt.Errorf("conversions of currency %s to %s is not supported at the time", req.From, req.To)
 	}
 
-	if req.Amount <= 0 {
-		return nil, errors.New("conversion rates only occur whit positive values greater than zero")
+	if req.Amount < 0 {
+		return nil, errors.New("conversion rates only apply to positive values")
 	}
 
 	var currency Currency

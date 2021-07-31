@@ -49,6 +49,14 @@ func conversionHandler(w http.ResponseWriter, r *http.Request) {
 
 func getConversionTable(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	fromCurrency := r.URL.Query().Get("currency")
+	if fromCurrency != "" {
+		value, found := exchange.Conversions[fromCurrency]
+		if found {
+			json.NewEncoder(w).Encode(value)
+			return
+		}
+	}
 	json.NewEncoder(w).Encode(exchange.Conversions)
 }
 
